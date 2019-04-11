@@ -1,1 +1,26 @@
 // Navigation Styles here
+a {
+    all: unset;
+}
+nav {
+    margin-top: 20px;
+    border-bottom: 2px dashed @navigation-border;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-color: @shark;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    .left {
+        display: flex;
+        width: 50%;
+        text-align: left;
+    }
+
+    .right {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+    }
+}
