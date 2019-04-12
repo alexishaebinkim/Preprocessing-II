@@ -1,1 +1,23 @@
 // Mixins in here
+
+.custom-btn(@padding-top: 5%; @width: 80%; @background-color: #17A2B8; @btn-font-color:#FFFFFF){
+    display: block;
+    padding-top: @padding-top;
+    height: 45px;
+    font-size: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: @width;
+    background-color: @background-color;
+    color: @btn-font-color;
+}
+
+.btn {
+    display: flex;
+    .custom-btn(5%; 80%; @button-bg; @main-bg);
+
+    @media @mobile {
+        .custom-btn(3%; 100%; @button-bg; @main-bg);
+        flex-direction: column;
+      }
+}

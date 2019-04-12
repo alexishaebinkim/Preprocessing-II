@@ -1,1 +1,35 @@
 // Navigation Styles here
+a {
+    all: unset;
+}
+nav {
+    margin-top: 20px;
+    border-bottom: 2px dashed @navigation-border;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-color: @shark;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    .left {
+        display: flex;
+        width: 50%;
+
+        @media @mobile {
+            justify-content: center;
+        }
+
+    }
+
+    .right {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+    }
+
+    @media @mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+}
