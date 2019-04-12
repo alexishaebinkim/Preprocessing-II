@@ -1,8 +1,8 @@
 // Mixins in here
 
-.custom-btn(@width: 80%; @background-color: #17A2B8; @btn-font-color:#FFFFFF){
+.custom-btn(@padding-top: 5%; @width: 80%; @background-color: #17A2B8; @btn-font-color:#FFFFFF){
     display: block;
-    padding-top: 5%;
+    padding-top: @padding-top;
     height: 45px;
     font-size: 2rem;
     border-radius: 10px;
@@ -13,5 +13,11 @@
 }
 
 .btn {
-    .custom-btn(80%; @button-bg; @main-bg);
+    display: flex;
+    .custom-btn(5%; 80%; @button-bg; @main-bg);
+
+    @media @mobile {
+        .custom-btn(3%; 100%; @button-bg; @main-bg);
+        flex-direction: column;
+      }
 }
