@@ -223,8 +223,6 @@ nav .right {
 }
 @media (max-width: 500px) {
   nav {
-    background-color: red;
-    /*REMOVE*/
     flex-direction: column;
     align-items: center;
   }
